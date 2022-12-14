@@ -10,33 +10,45 @@ public class Main {
 
         WebDriver driver = new ChromeDriver();
         driver.get("https://news.ycombinator.com/login?goto=news");
-        String userName = "mangoski";
-        String userPass = "Mangopower123*";
+        String userName = "pinocio321";
+        String userPass = "Pinocio123*";
 
-        //Login
-        WebElement usernameRegistratie = driver.findElements(By.name("acct")).get(1);
-        usernameRegistratie.sendKeys(userName);
-        // Login password
-        WebElement passwordRegistratie = driver.findElements(By.name("pw")).get(1);
-        passwordRegistratie.sendKeys(userPass);
+        //Registration
+//        WebElement usernameRegistratie = driver.findElements(By.name("acct")).get(1);
+//        usernameRegistratie.sendKeys(userName);
+        // Registration password
+//        WebElement passwordRegistratie = driver.findElements(By.name("pw")).get(1);
+//        passwordRegistratie.sendKeys(userPass);
+        //Registration button
+//        driver.findElement(By.xpath("/html/body/form[2]/input[3]")).click();
+
 
 //        driver.findElements(By.name("acct")).get(0).sendKeys("abc");
 
-       // Registration
-       WebElement usernameLogin = driver.findElements(By.name("acct")).get(0);
-       usernameLogin.sendKeys(userName);
-       System.out.println(usernameLogin.getText());
+        // Login
+        WebElement usernameLogin = driver.findElements(By.name("acct")).get(0);
+        usernameLogin.sendKeys(userName);
+        System.out.println(usernameLogin.getText());
 
-       // Registration password
+         //Login password
         WebElement passwordLogin = driver.findElements(By.name("pw")).get(0);
         passwordLogin.sendKeys(userPass);
 
-        //Registration button
-      driver.findElement(By.xpath("/html/body/form[2]/input[3]")).click();
+        //Login button
+          driver.findElement(By.xpath("/html/body/form[1]/input[2]")).click();
+
+
+        // titel van 3e artikel
+        driver.findElement(By.xpath("//*[@id=\"33983748\"]/td[3]/span/a")).click();
+
+        //logout
+     driver.findElement(By.xpath("//*[@id=\"logout\"]")).click();
 
 
 
-
+        //Dit werk niet?
+//        WebElement registrationButton = driver.findElements(By.tagName("input")).get(3);
+//        registrationButton.click();
 
 
         //By.xpath()
