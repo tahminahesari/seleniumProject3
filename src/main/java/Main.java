@@ -9,9 +9,16 @@ public class Main {
     public static void main(String[] args) {
 
         WebDriver driver = new ChromeDriver();
+//        driver.get("https://news.ycombinator.com/");
+//        WebElement test = driver.findElement(By.xpath("html/body/center/table/tbody/tr[3]/td/table/tbody/tr[7]/td[3]/span/a"));
+//        System.out.println(test.getText());
+//        test.click();
+//        System.exit(0);
+
+
         driver.get("https://news.ycombinator.com/login?goto=news");
-        String userName = "pinocio321";
-        String userPass = "Pinocio123*";
+        String userName = "sarang777";
+        String userPass = "Sarang123*";
 
         //Registration
 //        WebElement usernameRegistratie = driver.findElements(By.name("acct")).get(1);
@@ -39,19 +46,12 @@ public class Main {
 
 
         // titel van 3e artikel
-        driver.findElement(By.xpath("//*[@id=\"33983748\"]/td[3]/span/a")).click();
+//        WebElement test2 = driver.findElement(By.xpath("/html/body/center/table/tbody/tr[3]/td/table/tbody/tr[7]/td[3]/span/a"));;
+//        test2.click();
 
-        //logout
+       // logout
      driver.findElement(By.xpath("//*[@id=\"logout\"]")).click();
 
 
-
-        //Dit werk niet?
-//        WebElement registrationButton = driver.findElements(By.tagName("input")).get(3);
-//        registrationButton.click();
-
-
-        //By.xpath()
-//        driver.findElement(By.XPath("/html/body/form[2]/table/tbody/tr[1]/td[2]/input")).sendKeys("Mango");
     }
 }
